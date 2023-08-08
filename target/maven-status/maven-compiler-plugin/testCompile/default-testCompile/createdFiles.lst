@@ -1,0 +1,9 @@
+com\EbankTestcases\BaseClass.class
+com\Ebank\ExtentReport\Reports.class
+com\EbankTestcases\TC1_LoginTest.class
+com\EbankTestcases\TC3_LoginDDTest.class
+com\Ebank\utilities\ReadGlobal.class
+com\EbankTestcases\TC2_LoginFail.class
+com\EbankTestcases\TC4_AddCust.class
+com\Ebank\utilities\EbankListener.class
+com\Ebank\utilities\EbankEdUtiles.class

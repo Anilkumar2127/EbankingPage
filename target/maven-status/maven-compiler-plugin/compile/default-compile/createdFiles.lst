@@ -1,0 +1,4 @@
+com\EbankPageObjects\AddCust.class
+com\EbankPageObjects\CustAddSuccPage.class
+com\EbankPageObjects\LoginPage.class
+com\EbankPageObjects\LogoutPage.class
