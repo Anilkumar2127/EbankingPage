@@ -9,7 +9,7 @@ import com.EbankPageObjects.LoginPage;
 
 public class TC2_LoginFail extends BaseClass
 {
-	@Test
+	@Test(groups= {"smoke"})
 	public void errorLogin() throws InterruptedException
 	{
 		LoginPage lp =new LoginPage(driver);

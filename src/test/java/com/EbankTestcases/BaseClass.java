@@ -34,28 +34,21 @@ public class BaseClass
 	public String url=Rg.getUrl();
 	public static WebDriver driver;
 	@Parameters("browser")
-	
 	@BeforeTest
-	public void setUp()
+	public void setUp(String browser)
 	{	
-		if(Rg.getBrowser().equalsIgnoreCase("chrome"))
+		if(browser.equalsIgnoreCase("chrome"))
 		{
 		System.setProperty("webdriver.chrome.driver",Rg.getPath());
 		driver =new ChromeDriver();
 		}
-		if(Rg.getBrowser().equalsIgnoreCase("firefox"))
+		if(browser.equalsIgnoreCase("firefox"))
 		{
 			System.out.print("Firefox");
 		}
 		driver.get(url);
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(20,TimeUnit.SECONDS);
-		
-		 LoginPage lp= new LoginPage(driver);	
-		 lp.setUserName(username);
-		 lp.setPasssword(Password);
-		 lp.clickSubmit();
-
 	}
 	
 	@AfterTest
@@ -64,14 +57,15 @@ public class BaseClass
 		driver.quit();
 	}
 	
-	public void getErrorScreenShot(String methodName ) throws IOException
+	public String getErrorScreenShot(String methodName) throws IOException
 	{
+		
 		TakesScreenshot ts =  (TakesScreenshot) driver;
 		File src =ts.getScreenshotAs(OutputType.FILE);
 	
 		File dsfile=new File("./"+"/ScreenShots/"+methodName+".png");
 		FileUtils.copyFile(src,dsfile);
-		
+		return "./"+"/ScreenShots/"+methodName+".png";
 	}
 	public boolean isAlertPresent()
 	{

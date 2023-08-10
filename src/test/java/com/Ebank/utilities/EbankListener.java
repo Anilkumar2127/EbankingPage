@@ -12,7 +12,7 @@ import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 
-public class EbankListener  implements ITestListener
+public class EbankListener extends BaseClass implements ITestListener
 {
 	 ExtentTest test;
 	 Reports report =new Reports();
@@ -24,11 +24,11 @@ public class EbankListener  implements ITestListener
 	
 	public void onTestFailure(ITestResult result)
 	{
-		BaseClass bs =new BaseClass();
+		
 	   test.log(Status.FAIL,result.getMethod().getMethodName());
 	   
 	   try {
-		   		bs.getErrorScreenShot(result.getMethod().getMethodName());
+		   	String filepath = getErrorScreenShot(result.getMethod().getMethodName());
 	   		} catch (IOException e) 
 	   		{
 	   				e.printStackTrace();

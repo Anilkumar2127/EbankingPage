@@ -143,11 +143,11 @@
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite name=&quot;Suite&quot; guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot;&gt;
+  &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
   &lt;listeners&gt;
     &lt;listener class-name=&quot;com.Ebank.utilities.EbankListener&quot;/&gt;
   &lt;/listeners&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot; verbose=&quot;0&quot;&gt;
-    &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
     &lt;classes&gt;
       &lt;class name=&quot;com.EbankTestcases.TC1_LoginTest&quot;/&gt;
     &lt;/classes&gt;
@@ -193,12 +193,12 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'LoginTest')
 data.setCell(0, 2, 'com.EbankTestcases.TC1_LoginTest')
-data.setCell(0, 3, 33);
+data.setCell(0, 3, 1716);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 33 ms</span>
+              <span class="suite-total-time">Total running time: 1 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -226,16 +226,16 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">com.EbankTestcases.TC1_LoginTest</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
-                <span class="method-name">setUp</span>
+                <span class="method-name">setUp(chrome)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
               <div class="test-method">
                 <span class="method-name">LoginTest</span>
-                <span class="method-start">12194 ms</span>
+                <span class="method-start">12343 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-test after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">12239 ms</span>
+                <span class="method-start">14070 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
